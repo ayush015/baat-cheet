@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* To style icons of font-awesome */
+.icon {
+  font-size: 2rem
+}
+
 li {
   list-style: none;
 }
@@ -200,189 +205,14 @@ body {
   }
 }
 
-.write {
-  z-index: 10;
-  position: absolute;
-  bottom: 16px;
-  height: 42px;
-  width: 95% !important;
-  margin-left: 1em;
-  border: 1px solid #e6e6e6;
-  background-color: #eceff1;
-  width: inherit;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.write input {
-  font-size: 16px;
+.app-container .right .card.others {
   float: left;
-  width: -moz-calc(100% - 90px);
-  width: -webkit-calc(100% - 90px);
-  width: -o-calc(100% - 90px);
-  width: calc(100% - 90px);
-  height: 40px;
-  padding: 0 10px;
-  color: #1a1a1a;
-  border: 0;
-  outline: none;
-  background-color: transparent;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
 }
 
-.write-right {
+.app-container .right .card.self {
   float: right;
-}
-
-.write .write-link.smiley:before {
-  display: inline-block;
-  float: left;
-  width: 40px;
-  height: 42px;
-  content: '';
-  background-size: 30px 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* font-awesome smiley */
-.fa-smile {
-  position: absolute;
-  font-size: 32px;
-  right: 3.5rem;
-  bottom: 0.3rem;
-  color: #57585a;
-}
-
-.write .write-link.send {
-  display: inline-block;
-  float: left;
-  width: 42px;
-  height: 42px;
-  margin-left: 5px;
-  content: '';
-  background-size: 38px 38px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* font-awesome send */
-.fa-paper-plane {
-  font-size: 30px;
-  margin-top: 0.3rem;
-}
-
-.write#join {
-  padding-left: 0;
-}
-
-.app-container .right .bubble {
-  font-size: 16px;
-  position: relative;
-  display: inline-block;
-  clear: both;
-  margin-bottom: 8px;
-  padding: 13px 14px;
-  vertical-align: top;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.app-container .right .bubble .info {
-  color: rgba(1, 1, 1, 0.7);
-  position: relative;
-  display: inline-block;
-  clear: both;
-}
-
-.app-container .right .bubble:before {
-  position: absolute;
-  top: 19px;
-  display: block;
-  width: 8px;
-  height: 6px;
-  content: '\00a0';
-  -moz-transform: rotate(29deg) skew(-35deg);
-  -ms-transform: rotate(29deg) skew(-35deg);
-  -webkit-transform: rotate(29deg) skew(-35deg);
-  transform: rotate(29deg) skew(-35deg);
-}
-
-.app-container .right .bubble.others {
-  float: left;
-  color: #fff;
-  -webkit-align-self: flex-start;
-  align-self: flex-start;
-  -moz-animation-name: slideFromLeft;
-  -webkit-animation-name: slideFromLeft;
-  animation-name: slideFromLeft;
-}
-
-.app-container .right .bubble.others:before {
-  left: -3px;
-  background-color: #007bff;
-}
-
-.app-container .right .self {
   -webkit-align-self: flex-end;
   align-self: flex-end;
-}
-
-.app-container .right .bubble.self {
-  float: right;
-  color: #1a1a1a;
-  background-color: #eceff1;
-  -webkit-align-self: flex-end;
-  align-self: flex-end;
-}
-
-.app-container .right .bubble.self:before {
-  right: -3px;
-  background-color: #eceff1;
-}
-
-.app-container .right .conversation-start {
-  position: relative;
-  width: 100%;
-  margin-bottom: 27px;
-  text-align: center;
-}
-
-.app-container .right .conversation-start span {
-  font-size: 14px;
-  display: inline-block;
-  color: #999;
-}
-
-.app-container .right .conversation-start span:before, .app-container .right .conversation-start span:after {
-  position: absolute;
-  top: 10px;
-  display: inline-block;
-  width: 30%;
-  height: 1px;
-  content: '';
-  background-color: #e6e6e6;
-}
-
-.app-container .right .conversation-start span:before {
-  left: 0;
-}
-
-.app-container .right .conversation-start span:after {
-  right: 0;
-}
-
-#submit, #cancel {
-  margin-top: 1.5%;
-  margin-left: 2%;
-  font-size: 1vw;
-  padding: 1%;
-  color: #1f4e9b;
-  background: rgba(0, 0, 0, 0);
-  border: solid 2px #1f4e9b;
 }
 
 #newRoom {
@@ -397,26 +227,6 @@ body {
   background-size: 40px 42px;
 }
 
-/* font-awesome class */
-.fa-plus-circle {
-  font-size: 40px;
-}
-
-#submit {
-  margin-left: calc(45% - 100px);
-}
-
-#cancel {
-  margin-left: 5%;
-}
-
-#submit, #cancel {
-  font-size: 1.2em;
-  border-radius: 12.5px;
-  width: 100px;
-  height: 35px;
-}
-
 #newRoom:hover, #submit:hover, #cancel:hover {
   border-color: #0b2d63;
   color: #0b2d63;
@@ -426,47 +236,6 @@ body {
 #newRoom:active, #submit:active, #cancel:active {
   border-color: #27496d;
   color: #27496d;
-}
-
-#room {
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
-  opacity: 0.85;
-  background: #f8f8f8;
-}
-
-#room input, #room textarea {
-  font-size: 1.1em;
-}
-
-#room>div {
-  border-radius: 2px;
-  padding: 20px 30px;
-  box-shadow: 0 0 15px;
-  font-size: 14px;
-  font-weight: bold;
-  width: 400px;
-  margin-left: calc(50% - 200px);
-  margin-top: 15%;
-}
-
-#roomName, #description {
-  margin: 5%;
-  width: 300px;
-  font-size: 1.5vw;
-  border-color: #000;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: transparent;
-}
-
-#roomName {
-  border: none;
-  border-bottom: 1.5px solid #000;
 }
 
 #online {
@@ -525,4 +294,29 @@ body {
 
 .error {
   display: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid lightgray;
+}
+
+.modal-body {
+  border-bottom: 1px solid lightgray;
+}
+
+/* Toast notifications */
+.toast-wrapper {
+  z-index: 2;
+  position: absolute;
+  top: 1em;
+  right: .25em;
+}
+
+.toast-header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.toast {
+  min-width: 200px;
 }
